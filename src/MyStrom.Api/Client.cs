@@ -2,6 +2,7 @@
 using MyStrom.Api.Models;
 using System;
 using System.Collections.Generic;
+using System.Net;
 
 namespace MyStrom.Api
 {
@@ -29,6 +30,22 @@ namespace MyStrom.Api
             LoadTemp();
             LoadRest();
             LoadPanel();
+        }
+
+        public void SetState(bool state)
+        {
+            using (var client = new WebClient())
+            {
+                client.DownloadString(GetUri($"relay?state={(state ? 1 : 0)}"));
+            }
+        }
+
+        public void ToggleState()
+        {
+            using (var client = new WebClient())
+            {
+                client.DownloadString(GetUri($"toggle"));
+            }
         }
 
         public void LoadInfo()
