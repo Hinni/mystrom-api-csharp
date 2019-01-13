@@ -2,7 +2,7 @@
 
 [![Build Status](https://dev.azure.com/hinnipipe/Github%20Pipeline/_apis/build/status/Hinni.mystrom-api-csharp?branchName=master)](https://dev.azure.com/hinnipipe/Github%20Pipeline/_build/latest?definitionId=1?branchName=master)
 [![GitHub release](https://img.shields.io/github/release/Hinni/mystrom-api-csharp.svg)](https://github.com/Hinni/mystrom-api-csharp/releases)
-[![NuGet](https://img.shields.io/nuget/v/mystrom-api-csharp.svg)](https://www.nuget.org/packages/MyStrom.Api/)
+[![NuGet](https://img.shields.io/nuget/v/MyStrom.Api.svg)](https://www.nuget.org/packages/MyStrom.Api/)
 
 Inofficial myStrom API C# implementation.
 
