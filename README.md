@@ -10,18 +10,20 @@ Inofficial myStrom API C# implementation. It currently only supports internal AP
 
 Install `MyStrom.Api` via NuGet package manager ([What is NuGet?](https://docs.microsoft.com/en-us/nuget/what-is-nuget))
 
-    Install-Package MyStrom.Api
+```powershell
+Install-Package MyStrom.Api
+```
 
 ## Usage
 
 ```cs
-var uri = new System.Url("http://192.168.254.1"); # Use here your device IP
+var uri = new System.Url("http://192.168.254.1"); // Use here your internal device IP address
 var client = new MyStrom.Api.Client(uri);
 
-# use RefreshAll to load all available data
+// use RefreshAll() to load all available data
 client.RefreshAll();
 
-# or for example LoadReport if you only want to load temperature, relay state and power consumption
+// or for example LoadReport() if you only want to load temperature, relay state and power consumption
 client.LoadReport();
 ```
 
