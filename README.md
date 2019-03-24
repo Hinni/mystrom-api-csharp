@@ -4,26 +4,32 @@
 [![GitHub release](https://img.shields.io/github/release/Hinni/mystrom-api-csharp.svg)](https://github.com/Hinni/mystrom-api-csharp/releases)
 [![NuGet](https://img.shields.io/nuget/v/MyStrom.Api.svg)](https://www.nuget.org/packages/MyStrom.Api/)
 
-Inofficial myStrom API C# implementation.
+Inofficial myStrom API C# implementation. It currently only supports internal API and NOT the public mobile one.
 
 ## Download via NuGet
 
 Install `MyStrom.Api` via NuGet package manager ([What is NuGet?](https://docs.microsoft.com/en-us/nuget/what-is-nuget))
 
-    Install-Package MyStrom.Api
+```powershell
+Install-Package MyStrom.Api
+```
 
 ## Usage
 
-```csharp
-var uri = new System.Url("http://192.168.254.1"); # Use here your device IP
+```cs
+var uri = new System.Url("http://192.168.254.1"); // Use here your internal device IP address
 var client = new MyStrom.Api.Client(uri);
 
-# use RefreshAll to load all available data
+// use RefreshAll() to load all available data
 client.RefreshAll();
 
-# or for example LoadReport if you only want to load temperature, relay state and power consumption
+// or for example LoadReport() if you only want to load temperature, relay state and power consumption
 client.LoadReport();
 ```
+
+## Open points
+
+- Support for public [mobile API](https://mystrom.ch/mobile/)
 
 ## Documentation
 
